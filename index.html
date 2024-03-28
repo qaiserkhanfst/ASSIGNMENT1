@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Research', 'Design'],
+          ['Mon',  1000,      400],
+          ['Tue',  1170,      460],
+          ['Wed',  660,       1120],
+        //   ['Thu',  650,      540]
+        //   ['Fri',  830,      500]
+        //   ['Sat',  910,      450]
+        //   ['Sun',  1020,      740]
+        ]);
+
+        var options = {
+        //   title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap')
+    
+    </style>
+
+<body>
+    <div id="main">
+        <div id="part1">
+            <div id="logo">
+                <i class="ri-shake-hands-fill"></i>
+                <h3>BRESS</h3>
+            </div>
+            <div class="bottomline"></div>
+
+            <div class="navv" id="nav">
+                <ul class="navlist" id="navlist">
+                 
+                         <li class="navitem">
+                        <i class="ri-dashboard-line"></i>
+                    <a href="#" class="navlink">Dashboard</a>
+                    
+                    </li>
+                    <li class="navitem">
+                        <i class="ri-pie-chart-2-line"></i>
+                    <a href="#" class="navlink">Projects</a>
+                    </li>
+                    <li class="navitem">
+                        <i class="ri-list-radio"></i>
+                    <a href="#" class="navlink">Task list</a>
+                    </li>
+                    <li class="navitem">
+                        <i class="ri-send-backward"></i>
+                    <a href="#" class="navlink">Services</a>
+                 </li>
+                    <li class="navitem">
+                        <i class="ri-notification-2-fill"></i>
+                    <a href="#" class="navlink">Notifications <span class="navbadge">2</span></a>
+                    </li>
+                    <li class="navitem">
+                        <i class="ri-chat-smile-3-fill"></i>
+                    <a href="#" class="navlink">Chat</a>
+                    </li>
+            </ul>
+            </div>
+            <div id="footer">
+                <img src="qaiser.JPG" alt="">
+                <div class="smallcircle"></div>
+                <h4>QAISER KHAN</h4>
+                <p>qaiserkhanfst@gmail.com</p>
+            </div>
+        </div>
+        <div id="part2">
+
+            <div id="header">
+
+                <div class="hpart1">
+                    <div class="inputsearch">
+                     <input type="search" placeholder="Search">
+                         <i class="ri-search-line"></i>
+                    </div>
+                <div class="inputdate">
+                    <select name="date" id="dateDropdown">
+                        <option value="">Select Date</option>
+                        <option value="2024-03-22">March 22, 2024</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+    
+                </div>
+                <div class="hpart2">
+                     <ul class="headerbtn">
+                         <li>
+                         <i class="ri-layout-right-fill"></i>
+                            <a href="#">Card</a>
+                        </li>
+                         <li>
+                         <i class="ri-list-unordered"></i>
+                          <a href="#">List</a>
+                        </li>
+                    </ul>
+
+            </div>
+
+            </div>
+        <div id="midbody">
+                 <div class="tableheader">
+
+                     <div class="tableheader1">
+                        <h3>Last tasks</h3>
+                        <p class="custom-paragraph"><span class="custom-text">117 total,</span> proceed to resolve them</p>
+                    </div>
+
+                     <div class="tableheader2">
+                        <div class="theader2p theader2p1">
+                            <h3>94</h3>
+                            <p class="custom-paragraph">Done</p>
+                         </div>
+                    <div class="theader2p">
+                         <h3>23</h3>
+                        <p class="custom-paragraph">In progress</p>
+                    </div>
+                </div>
+            </div>
+                <div class="tablebody">
+
+                    <table id="myTable">
+    <thead class="maintheader">
+        <tr>
+            <th><input class="mycheckbox" type="checkbox"><label for="myCheckbox" class="custom-checkbox"></label>Name</th>
+            <th>Admin</th>
+            <th>Members</th>
+            <th>Status</th>
+            <th>Run time</th>
+            <th class="hfinishdate">Finish date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input class="mycheckbox" type="checkbox">ClientOnboarding-Circle</td>
+            <td><img class="adminimage" src="qaiser.JPG" alt="">
+                Samanta J.</td>
+            <td>3</td>
+            <td class="status" ><i class="ri-time-line"></i> In progress</td>
+            <td>6 hours</td>
+            <td class="finishdate">6 Mon</td>
+        </tr>
+        <tr>
+            <td><input class="mycheckbox" type="checkbox">Meeting with Webflow and Notion</td>
+            <td><img class="adminimage" src="qaiser.JPG" alt=""> Bob P.</td>
+            <td>4</td>
+            <td id="statusdone" class="status" ><i class="ri-checkbox-circle-line"></i> Done</td>
+            <td>2 hours</td>
+            <td class="finishdate">7 Tue</td>
+        </tr>
+        <tr>
+            <td><input class="mycheckbox" type="checkbox">First Handoff with Engineers</td>
+            <td><img class="adminimage" src="qaiser.JPG" alt=""> Kate O.</td>
+            <td>10</td>
+            <td class="status"><i class="ri-time-line"></i> In progress</td>
+            <td>3 days</td>
+            <td class="finishdate">10 Fri</td>
+        </tr>
+        <tr>
+            <td><input class="mycheckbox" type="checkbox">Client Drafting (2) with Lawrence</td>
+            <td><img class="adminimage" src="qaiser.JPG" alt=""> Jack F.</td>
+            <td>7</td>
+            <td class="status"><i class="ri-time-line"></i> In progress</td>
+            <td>1 week</td>
+            <td class="finishdate">19 Sun</td>
+        </tr>
+            </tbody>
+                     </table>
+
+                
+                </div>
+        
+        
+    </div>
+        <div id="lowerbody">
+            <div class="productivity">
+                <div class="productivityp1">
+                    <div class="pleft">
+                        <h4>Productivity</h4>
+                    <div class="presearch">
+                        <p><i id="circle1" class="ri-circle-fill"></i>Research</p>
+                        <p><i id="circle2" class="ri-circle-fill"></i>Design</p>
+                    </div>
+                    </div>
+                    
+                    <div class="pright">
+                        <div class="inputdate2">
+                             <select name="date" id="dateDropdown">
+                            <option value="">01-07 May</option>
+                            <option value="2024-03-22">March 22, 2024</option>
+                             <!-- Add more options as needed -->
+                             </select>
+                       </div>
+                       <p>Data updates every 3 hours</p>                      
+                    </div>
+                </div>
+                <div class="productivityp2" id="curve_chart">
+                              
+                </div>
+
+                </div>
+
+                <div class="container">
+                    
+                    <h1>Projects in Progress</h1>
+                     <div class="cards">
+                         <div class="card"><div class="pheader">
+                            <h6>Feedback</h6>
+                            <h6>Bug</h6>
+                            <h6>Design System</h6>
+                            </div>
+                            <div class="pbody">
+                                <h4>Improve cards readability</h4>
+                                <p>21.03.22</p>
+                                </div>
+                                <div class="pfooter">
+                                    <div class="cardsimages">
+                                        <img src="qaiser.JPG" alt="">
+                                        <img src="qaiser.JPG" alt="">
+                                        <img src="qaiser.JPG" alt=""></div>
+                                    <div class="cardscomments">
+                                        <p><i class="ri-message-2-line"></i>12 comments</p>
+                                        <p><i class="ri-file-paper-line"></i>0 files</p>
+                                        </div>
+                                </div>
+
+                            </div>
+                         <div class="card">Card 2</div>
+                         <div class="card">Card 3</div>
+                         <div class="card">Card 4</div>
+                        </div>
+                    <button class="nextbtn"><i class="ri-arrow-right-s-line"></i></button>
+                </div>
+            </div>
+            
+        
+            
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
